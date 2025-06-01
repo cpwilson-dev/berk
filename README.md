@@ -1,8 +1,9 @@
 # Berk
 
 >## Berk 
-> A foolish or stupid person
-> "You absolute berk - why would you try to create your own version control system?" 
+>A foolish or stupid person
+>
+>"You absolute berk - why would you try to create your own version control system?" 
 
 ## 📘 Project Overview
 
@@ -10,7 +11,7 @@ The primary goal of this repository is to:
 
 - Deepen understanding of Git by rebuilding various features.
 
-## 🛠️Features
+## 🛠️ Features
 
 - `config` - Get and set repository or global options
 - `init` - Create an empty Berk repository
@@ -21,7 +22,7 @@ The primary goal of this repository is to:
 
 ## 📚 Acknowledgments
 
-This project is not just inspired by it's straight up copying entire sections of Git. If you've not used it before it's well worth a look:
+This project is not just inspired by; it's straight up copying entire sections of Git. If you've not used it before it's well worth a look:
 
 - [**Git**](https://git-scm.com/)
 

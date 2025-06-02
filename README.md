@@ -1,6 +1,5 @@
 # Berk
 
->## Berk 
 >A foolish or stupid person
 >
 >"You absolute berk - why would you try to create your own version control system?" 
@@ -25,6 +24,8 @@ The primary goal of this repository is to:
 This project is not just inspired by; it's straight up copying entire sections of Git. If you've not used it before it's well worth a look:
 
 - [**Git**](https://git-scm.com/)
+
+All rights of the recorded work reserved, except for code which I have stolen, and the "finders keepers" rule has been applied.
 
 ## 📣 Feedback and Contributions
 

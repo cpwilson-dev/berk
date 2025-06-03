@@ -1,7 +1,11 @@
 package main
 
-import "github.com/cpwilson-dev/berk/cmd"
+import (
+	"os"
+
+	"github.com/cpwilson-dev/berk/cmd"
+)
 
 func main() {
-	cmd.StartRepl()
+	cmd.Execute(os.Args)
 }

@@ -18,11 +18,28 @@
 - on install (or first use?), create a `~/.berkconfig` file
 - in this file store the username, useremail and default branch
 
+- needs to handle the following flags
+    - `--global` => reference global config
+    - `--local` => reference local config
+    - `--add` => adds a key/value. Default local config
+    - `--get` => gets a key. Default global & local
+    - `--unset` => deletes a key. Default global & local
+    - `--list` => returns all keys. Default global & local
+    - `--remove-section` => removes entire section
+
+#### Locations
+
+There are several locations where Git can be configured. From more general to more specific, they are:
+- system: `/etc/gitconfig`, a file that configures Git for all users on the system
+- global: `~/.gitconfig`, a file that configures Git for all projects of a user
+- local: `.git/config`, a file that configures Git for a specific project
+- worktree: `.git/config.worktree`, a file that configures Git for part of a project
+
 ### Status
 
 A file can be in one of several states in a Git repository:
 - `untracked`: Not being tracked by Git
-- `staged`: Marked for unclusion in the next commit
+- `staged`: Marked for inclusion in the next commit
 - `committed`: Saved to the repository's history
 
 The `git status` command shows you the current state of your repo. It will tell you which files are untracked, staged and committed.
@@ -76,7 +93,18 @@ A Git repo is a (potentially very long) list of commits, where each commit repre
 - When the commit was made
 - What was changed
 
-Each commit has a unique indentifier called a "commit hash". This is a long string of characters that uniquely identifies the commit. 
+Each commit has a unique identifier called a "commit hash". This is a long string of characters that uniquely identifies the commit. 
+
+### Plumbing
+
+Git uses a cryptographic hash function called `SHA-1` to generate commit hashes.
+
+All the data in a Git repository is stored directly in the (hidden) `.git` directory. That includes  all the commits, branches, tags, and other objects we'll learn about later. Git is made up of objects that are stored in the `.git/objects` directory. A commit is just a type of object.
+
+- `tree`: git's way of storing a directory
+- `blob`: git's way of storing a file
+
+Git stores an entire snapshot of files on a per-commit level. Git compresses and packs files to store them more efficiently and deduplicates files that are the same across different commits.
 
 ## CLI Commands
 

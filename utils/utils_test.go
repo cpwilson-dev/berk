@@ -1,4 +1,4 @@
-package main
+package utils
 
 import "testing"
 
@@ -26,7 +26,7 @@ func TestCleanInput(t *testing.T) {
 
 	for _, cs := range cases {
 
-		got := cleanInput(cs.input)
+		got := CleanInput(cs.input)
 
 		if len(got) != len(cs.want) {
 			t.Errorf("The lengths are not equal. Got: %v, want: %v", len(got), len(cs.want))

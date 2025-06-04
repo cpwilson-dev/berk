@@ -46,6 +46,11 @@ func getCommandsMap() map[string]cliCommand {
 			description: "Configures Berk to your liking",
 			callback:    commandConfig,
 		},
+		"diff": {
+			name:        "diff",
+			description: "TODO",
+			callback:    commandHelp,
+		},
 		"exit": {
 			name:        "exit",
 			description: "Exits the application",
@@ -98,6 +103,11 @@ func getCommandsMap() map[string]cliCommand {
 		},
 		"tag": {
 			name:        "tag",
+			description: "TODO",
+			callback:    commandHelp,
+		},
+		"version": {
+			name:        "version",
 			description: "TODO",
 			callback:    commandHelp,
 		},

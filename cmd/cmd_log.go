@@ -9,6 +9,11 @@ A Git repo is a (potentially very long) list of commits, where each commit repre
 - When the commit was made
 - What was changed
 
+flags:
+- short (the default)
+- full (shows the full ref name)
+- no (no decoration)
+
 Each commit has a unique identifier called a "commit hash". This is a long string of characters that uniquely identifies the commit.
 */
 

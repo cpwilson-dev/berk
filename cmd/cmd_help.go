@@ -2,6 +2,12 @@ package cmd
 
 import "fmt"
 
+var helpCmd = &cliCommand{
+	name:        "help",
+	description: "help",
+	callback:    commandHelp,
+}
+
 func commandHelp() error {
 
 	fmt.Println("Welcome to berk")

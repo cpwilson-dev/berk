@@ -14,6 +14,8 @@ type cliCommand struct {
 	callback    func() error
 }
 
+var commandsMap = make(map[string]*cliCommand)
+
 func getCommandsMap() map[string]cliCommand {
 	return map[string]cliCommand{
 		"add": {
@@ -69,7 +71,7 @@ func getCommandsMap() map[string]cliCommand {
 		"log": {
 			name:        "log",
 			description: "TODO",
-			callback:    commandHelp,
+			callback:    commandLog,
 		},
 		"ls-files": {
 			name:        "ls-files",
@@ -145,6 +147,11 @@ func StartRepl() {
 }
 
 func Execute(args []string) {
+	commandsMap["help"] = &cliCommand{
+		name:        "help",
+		description: "help",
+		callback:    commandHelp,
+	}
 
 	if len(args) < 2 {
 		fmt.Println("Starting Repl")
